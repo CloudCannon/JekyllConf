@@ -18,6 +18,19 @@ h3 {
   margin: 35px auto 20px auto;
 }
 
+h5 {
+  background: rgba(0,0,0,.4);
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 18px;
+}
+
+h4 {
+  position: relative;
+  bottom: 18px;
+  font-size: 16px;
+}
+
 body {
   width: 900px;
   margin: 0 auto;
@@ -30,6 +43,12 @@ a {
 
 a:hover{
   text-decoration: underline;
+}
+
+dt {
+    font-weight: bold;
+  margin: 14px 0;
+  font-size: 1.1em;
 }
 
 /*.half-box {
