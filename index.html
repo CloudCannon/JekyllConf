@@ -1,118 +1,68 @@
 ---
 layout: default
 ---
-<!-- add to calendar button -->
-  <script type="text/javascript">(function () {
-    if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
-    if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
-        var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-        s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
-        s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
-        var h = d[g]('body')[0];h.appendChild(s); }})();
-    </script>
 
-  <h1> <img src="/images/logo.png" alt="JekyllConf" width="600px" /> </h1>
+<section>
+	<div class="container">
 
-  <h2> The free, online global conference for all things <a target="_blank" href="http://jekyllrb.com/">Jekyll</a></h2>
-  <h4> Best Practices &vert; Advanced Case Studies &vert; The Future of Jekyll </h4>
-  <div class="coming-soon clearfix">
-    <h2> Streaming <strong>here</strong></h2>
-    <p> on </p>
-    <h2> Saturday 2nd of May 2015 </h2>
-    <p> 10am - 6pm PST </p>
+		<h2 class="editable">Streaming Everywhere</h2>
 
-    <div class="button">
-      <a href="http://eepurl.com/bh21-L" target="_blank">Register Free</a>
-    </div>
+		<dl>
+			<dt>How much</dt>
+			<dd>FREE</dd>
+			<dt>Where</dt>
+			<dd>Streaming Everywhere</dd>
+			<dt>When</dt>
+			<dd>10am - 6pm (PST), Saturday 2nd May 2015</dd>
+		</dl>
+	</div>
+</section>
 
-    <span class="addtocalendar button">
-        <var class="atc_event">
-            <var class="atc_date_start">2015-05-02 10:00:00</var>
-            <var class="atc_date_end">2015-05-02 18:00:00</var>
-            <var class="atc_timezone">America/Los_Angeles</var>
-            <var class="atc_title">JekyllConf</var>
-            <var class="atc_description">The free, online global conference for all things Jekyll</var>
-            <var class="atc_location">http://jekyllconf.com</var>
-            <var class="atc_organizer_email">admin@jekyllconf.com</var>
-        </var>
-    </span>
-  </div>
+<section>
+	<div class="container">
+		<h2 class="editable">Speakers</h2>
 
-  <div class="share-button twitter-button">
-    <a class="twitter-share-button" href="https://twitter.com/share"
-    data-related="twitterdev"
-    data-count="none"
-    data-url="http://jekyllconf.com"
-    data-text="I'm attending @JekyllConf - a free, online conference for all things @jekyllrb">
-      Tweet
-    </a>
-    <script>
-    window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
-    </script>
-  </div>
-  <div class="share-button"><div class="fb-share-button" data-href="http://jekyllconf.com" data-layout="button"></div></div>
+		<ul class="speakers">
+			{% for speaker in site.collections.speakers.docs %}
+				<li>
+					<div>
+						<img src="{{ speaker.image_path }}" alt="{{ speaker.name }}" />
+					</div>
+					<h3><a href="{{ speaker.twitter_url }}">{{ speaker.name }}</a></h3>
+					<p>{{ speaker.title }}</p>
+			{% endfor %}
+		</ul>
+		<p class="coming-soon">More speakers coming soon</p>
+	</div>
+</section>
 
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=425428800940841&version=v2.3";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+<section>
+	<div class="container">
+		<h2 class="editable">Sponsors</h2>
 
+		<ul class="sponsors">
+			{% for sponsor in site.collections.sponsors.docs %}
+				<li>
+					<a target="_blank" href="{{ sponsor.url }}">
+						<img src="{{ sponsor.image_path }}" alt="CloudCannon" width="{{ sponsor.image_width }}px" />
+					</a>
+			{% endfor %}
+		</ul>
+	</div>
+</section>
 
+<section>
+	<div class="container editable">
+		<h2>Details</h2>
 
-  <h3> Speakers </h3>
+		<h3>Where is JekyllConf being held?</h3>
+		<p>Right here on this website! We're using Google Hangouts on Air to stream the speaker sessions to the placeholder above.</p>
 
-  <ul class="speakers clearfix">
-    <li>
-      <div>
-        <img src="/images/speakers/parker.jpeg" alt="Parker Moore">
-      </div>
-      <p> <a href="https://twitter.com/parkr">Parker Moore</a> <br> Jekyll Core Team </p>
-    </li>
+		<h3>I can't attend, will the videos be available later?</h3>
+		<p>Yes, all the videos will be pubically available on YouTube after the event.</p>
 
-    <li>
-      <div>
-        <img src="/images/speakers/brandon.jpeg" alt="Brandon Mathis">
-      </div>
-      <p> <a href="https://twitter.com/imathis">Brandon Mathis</a> <br> Creator of Octopress </p>
-    </li>
+		<h3>Who's running JekyllConf and why?</h3>
+		<p>JekyllConf is being put on by CloudCannon. We make a platform which allows developers to create websites in HTML or Jekyll and have non-technical people make updates inline. We want to do our part in growing the community and showcase all the awesome people and projects using Jekyll.</p>
 
-    <li>
-      <div>
-        <img src="/images/speakers/kyle.jpeg" alt="Kyle Rush">
-        <p> <a href="https://twitter.com/kylerush">Kyle Rush</a> <br> Head of Optimization at Optimizely </p>
-      </div>
-    </li>
-
-    <li>
-      <div>
-        <img src="/images/speakers/mike.jpeg" alt="Mike Neumegen">
-        <p> <a href="https://twitter.com/mikeneumegen">Mike Neumegen</a> <br> CEO at CloudCannon </p>
-      </div>
-    </li>
-  </ul>
-
-  <h5> More speakers coming soon </h5>
-
-<h3> Sponsors </h3>
-
-<ul class="sponsers clearfix">
-  <li><a target="_blank" href="http://dropbox.com"><img src="/images/sponsers/dropbox.svg" alt="Dropbox" width="200px" class="dropbox"/></a></li>
-  <li><a target="_blank" href="http://cloudcannon.com"><img src="/images/sponsers/cloudcannon.svg" alt="CloudCannon" width="160px"/></a></li>
-</ul>
-
-<h3> The Details </h3>
-
-<dl>
-  <dt>Where is JekyllConf being held?</dt>
-  <dd> Right here on this website! We're using Google Hangouts on Air to stream the speaker sessions to the placeholder above.</dd>
-
-  <dt>I can't attend, will the videos be available later?</dt>
-  <dd> Yes, all the videos will be pubically available on YouTube after the event.</dd>
-
-  <dt>Who's running JekyllConf and why?</dt>
-  <dd><a target="_blank" href="http://cloudcannon.com">CloudCannon</a> is organising JekyllConf. We make a platform which allows developers to create websites in HTML or Jekyll and have non-technical people make updates inline. We want to do our part in growing the community and showcase all the awesome people and projects using Jekyll. </dd>
-</dl>
+	</div>
+</section>

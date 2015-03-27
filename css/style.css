@@ -1,202 +1,126 @@
 html, body {
-  padding: 0;
-  margin: 0
-}
-
-html {
-  background: #555 url('../images/footer_lodyas.png');
-  color: #fff;
-  font-family: 'Open Sans Condensed', sans-serif;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-h3 {
-  border-bottom: solid 1px #555;
-  padding: 0 0 7px 0;
-  width: 80%;
-  margin: 35px auto 20px auto;
-}
-
-
-h5 {
-  background: rgba(0,0,0,.4);
-  margin: 20px auto;
-  padding: 10px;
-  font-size: 18px;
-}
-
-h4 {
-  position: relative;
-  bottom: 18px;
-  font-size: 16px;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  width: 900px;
-  margin: 0 auto;
+	font: 300 21px Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #ddd;
+	background-color: #333;
+	border-top: 5px solid #fc0;
+	line-height: 1.5;
+}
+
+section {
+	padding: 20px 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+h2 {
+	font-size: 2.2em;
+	font-weight: 300;
+	margin: 1em 0 0.5em 0;
 }
 
 a {
-  color: #DD2E44;
-  text-decoration: none;
+	text-decoration: none;
+	color: #eee;
 }
 
-a:hover{
-  text-decoration: underline;
+a:hover {
+	text-decoration: none;
+	color: #fff;
 }
 
-dt {
-    font-weight: bold;
-  margin: 14px 0;
-  font-size: 1.1em;
+.container {
+	max-width: 1000px;
+	width: 95%;
+	margin: 0 auto;
 }
 
-/*.half-box {
-  width: 50%;
-  padding: 10px;
-  box-sizing: border-box;
-  float: left;
-}*/
-
-.coming-soon {
-  border: 2px solid #fff;
-  background: #222;
-  padding: 30px 0 50px 0;
+.speakers, .speakers li,
+.sponsors, .sponsors li  {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
 }
 
-.coming-soon ul, .speakers, .sponsers {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.sponsors li {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50%;
 }
 
 .speakers li {
-  width: 24.6%;
-  float: left;
-  margin: 0 .2%;
+	display: inline-block;
+	vertical-align: top;
+	width: 48%;
+	margin: 1%;
 }
 
-
-.speakers li img {
-  width: 100%;
-}
-
-.sponsers li {
-  width: 50%;
-  text-align: center;
-  float: left;
-}
-
-
-.sponsers .dropbox {
-  position: relative;
-  top: 30px;
-}
-
-.share-button {
-  display: inline-block;
-  margin: 20px 1px;
-}
-
-.share-button.twitter-button {
-  position: relative;
-  top: 5px;
-}
-
-.button {
-  display: inline-block;
-  background-color:#DD2E44;
-  padding: 10px;
-  /* color: #fff !important; */
-  border-radius: 5px;
-  margin: 20px 2px 2px 2px;
-}
-
-.button a {
-  color: #fff;
-}
-
-.clearfix:after {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
+@media (min-width: 600px) {
+	.speakers li {
+		width: 23%;
 	}
-* html .clearfix             { zoom: 1; } /* IE6 */
-*:first-child+html .clearfix { zoom: 1; } /* IE7 */
-
-/**
- * AddToCalendar Blue Style
- * http://addtocalendar.com
- */
-
-/* Base */
-
-.addtocalendar var{
-    display: none;
 }
 
-.addtocalendar {
-    position: relative;
-    display: inline-block;
+
+.speakers div {
+	line-height: 0;
 }
 
-.atcb-link {
-    display: block;
-    outline: none!important;
-    cursor: pointer;
+.speakers p {
+	font-size: 0.8em;
 }
 
-.atcb-link:focus~ul,
-.atcb-link:active~ul,
-.atcb-list:hover{
-    visibility:visible;
+.speakers h3, .speakers p {
+	margin: 10px 0 0 0;
 }
 
-.atcb-list {
-    visibility: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 170px;
-    z-index: 900;
+.speakers img {
+	border-radius: 2px;
+	width: 100%;
 }
 
-.atcb-list,
-.atcb-item
-{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background: rgba(255, 255, 255, .7);
-    padding: 10px;
-    border-radius: 5px
+header, footer {
+	text-align: center;
+	background: #222;
+	padding: 80px 0 100px 0;
 }
 
-.atcb-item a {
-  color: #333;
+header h1 {
+	margin: 0;
 }
 
-.atcb-item {
-    float: none;
-    text-align: left;
+footer {
+	padding: 20px 0;
+	min-height: 50px;
+	line-height: 25px;
 }
 
-.atcb-item-link
-{
-    text-decoration: none;
-    outline: none;
-    display: block;
+footer p {
+	color: #aaa;
+	font-size: 0.8em;
+	max-width: 30%;
+	text-align: left;
+	margin: 0;
 }
 
-.atcb-item.hover,
-.atcb-item:hover {
-    position: relative;
-    z-index: 900;
-    cursor: pointer;
-    text-decoration: none;
-    outline: none;
+footer .hosted-by {
+	float: right;
+}
+
+footer img {
+	vertical-align: middle;
+}
+
+.coming-soon {
+	text-align: center;
+	background: #222;
+	padding: 5px;
+	border-radius: 2px;
 }
