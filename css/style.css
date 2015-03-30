@@ -27,12 +27,12 @@ h2 {
 
 a {
 	text-decoration: none;
-	color: #F04343;
+	color: #fc0;
 }
 
 a:hover {
 	text-decoration: none;
-	color: #DF1717;
+	color: #f90;
 }
 
 .container {
@@ -70,10 +70,12 @@ a:hover {
 
 
 .button > a {
-	padding: 10px;
+	padding: 10px 20px;
   color: #fff;
-	background-color:#F04343;
+	background-color:#fc0;
   border-radius: 5px;
+	color: #333;
+	font-weight: bold;
 }
 
 .center-text {
