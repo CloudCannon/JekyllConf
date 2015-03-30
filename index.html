@@ -11,7 +11,7 @@ layout: default
 			<dt>How much</dt>
 			<dd>FREE</dd>
 			<dt>Where</dt>
-			<dd>Streaming Everywhere</dd>
+			<dd>Streaming here</dd>
 			<dt>When</dt>
 			<dd>10am - 6pm (PST), Saturday 2nd May 2015</dd>
 		</dl>
@@ -36,6 +36,40 @@ layout: default
 	</div>
 </section>
 
+<section class='center-text'>
+    <div class="button">
+      <a href="http://eepurl.com/bh21-L" target="_blank">Register Free</a>
+    </div>
+  </div>
+
+	<div class="sharing-buttons">
+		<div class="share-button twitter-button">
+	    <a class="twitter-share-button" href="https://twitter.com/share"
+	    data-related="twitterdev"
+	    data-count="none"
+	    data-url="http://jekyllconf.com"
+	    data-text="I'm attending @JekyllConf - a free, online conference for all things @jekyllrb">
+	      Tweet
+	    </a>
+	    <script>
+	    window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+	    </script>
+	  </div>
+	  <div class="share-button"><div class="fb-share-button" data-href="http://jekyllconf.com" data-layout="button"></div></div>
+
+	  <div id="fb-root"></div>
+	  <script>(function(d, s, id) {
+	    var js, fjs = d.getElementsByTagName(s)[0];
+	    if (d.getElementById(id)) return;
+	    js = d.createElement(s); js.id = id;
+	    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=425428800940841&version=v2.3";
+	    fjs.parentNode.insertBefore(js, fjs);
+	  }(document, 'script', 'facebook-jssdk'));</script>
+	</div>
+</section>
+
+
+
 <section>
 	<div class="container">
 		<h2 class="editable">Sponsors</h2>
@@ -43,7 +77,7 @@ layout: default
 		<ul class="sponsors">
 			{% for sponsor in site.collections.sponsors.docs %}
 				<li>
-					<a target="_blank" href="{{ sponsor.url }}">
+					<a target="_blank" href="{{ sponsor.external_url }}">
 						<img src="{{ sponsor.image_path }}" alt="CloudCannon" width="{{ sponsor.image_width }}px" />
 					</a>
 			{% endfor %}
@@ -62,7 +96,7 @@ layout: default
 		<p>Yes, all the videos will be pubically available on YouTube after the event.</p>
 
 		<h3>Who's running JekyllConf and why?</h3>
-		<p>JekyllConf is being put on by CloudCannon. We make a platform which allows developers to create websites in HTML or Jekyll and have non-technical people make updates inline. We want to do our part in growing the community and showcase all the awesome people and projects using Jekyll.</p>
+		<p><a target="_blank" href="http://cloudcannon.com">CloudCannon</a> is organising JekyllConf. We make a platform which allows developers to create websites in HTML or Jekyll and have non-technical people make updates inline. We want to do our part in growing the community and showcase all the awesome people and projects using Jekyll.</p>
 
 	</div>
 </section>

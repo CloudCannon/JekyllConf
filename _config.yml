@@ -1,7 +1,3 @@
 collections:
   sponsors:
-    name: Sponsors
   speakers:
-    name: Speakers
-sass:
-  sass_dir: _scss

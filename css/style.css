@@ -27,12 +27,12 @@ h2 {
 
 a {
 	text-decoration: none;
-	color: #eee;
+	color: #F04343;
 }
 
 a:hover {
 	text-decoration: none;
-	color: #fff;
+	color: #DF1717;
 }
 
 .container {
@@ -60,6 +60,24 @@ a:hover {
 	vertical-align: top;
 	width: 48%;
 	margin: 1%;
+}
+
+.button {
+  display: inline-block;
+  margin: 20px 2px 2px 2px;
+}
+
+
+
+.button > a {
+	padding: 10px;
+  color: #fff;
+	background-color:#F04343;
+  border-radius: 5px;
+}
+
+.center-text {
+	text-align:center;
 }
 
 @media (min-width: 600px) {
@@ -123,4 +141,14 @@ footer img {
 	background: #222;
 	padding: 5px;
 	border-radius: 2px;
+}
+
+.share-button {
+  display: inline-block;
+  margin: 20px 1px;
+}
+
+.share-button.twitter-button {
+  position: relative;
+  top: 7px;
 }
