@@ -14,7 +14,7 @@ layout: default
 			<p>Streaming here at <a href="#">JekyllConf.com</a></p>
 
 			<h3>When?</h3>
-			<p>10am - 6pm (PST), Saturday 2nd May 2015</p>
+			<p>10am - 4pm (PST), Saturday 2nd May 2015</p>
 	</div>
 </section>
 
@@ -31,8 +31,9 @@ layout: default
 					<h3><a href="{{ speaker.twitter_url }}">{{ speaker.name }}</a></h3>
 					<p>{{ speaker.title }}</p>
 			{% endfor %}
-		</ul>
+		</li></ul>
 		<p class="coming-soon">More speakers coming soon</p>
+        <p class="coming-soon">Register your interest to hear when speaker times and topics are locked in.</p>
 	</div>
 </section>
 
@@ -40,15 +41,11 @@ layout: default
     <div class="button">
       <a href="http://eepurl.com/bh21-L" target="_blank">Register Free</a>
     </div>
-  </div>
+
 
 	<div class="sharing-buttons">
 		<div class="share-button twitter-button">
-	    <a class="twitter-share-button" href="https://twitter.com/share"
-	    data-related="twitterdev"
-	    data-count="none"
-	    data-url="http://jekyllconf.com"
-	    data-text="I just signed up for @JekyllConf #jekyllrb">
+	    <a class="twitter-share-button" href="https://twitter.com/share" 	 data-related="twitterdev" data-count="none" data-url="http://jekyllconf.com" data-text="I just signed up for @JekyllConf - a free, online conference for all things @jekyllrb">
 	      Tweet
 	    </a>
 	    <script>
@@ -81,7 +78,7 @@ layout: default
 						<img src="{{ sponsor.image_path }}" alt="CloudCannon" width="{{ sponsor.image_width }}px" />
 					</a>
 			{% endfor %}
-		</ul>
+		</li></ul>
 	</div>
 </section>
 
