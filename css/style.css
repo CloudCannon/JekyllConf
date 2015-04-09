@@ -25,6 +25,10 @@ h2 {
 	margin: 1em 0 0.5em 0;
 }
 
+h3 {
+	font-size: 23px;
+}
+
 a {
 	text-decoration: none;
 	color: #fc0;
