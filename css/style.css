@@ -88,7 +88,7 @@ a:hover {
 
 @media (min-width: 600px) {
 	.speakers li {
-		width: 23%;
+		width: 25%;
 	}
 }
 
@@ -107,7 +107,6 @@ a:hover {
 
 .speakers img {
 	border-radius: 2px;
-	width: 100%;
 }
 
 header, footer {
