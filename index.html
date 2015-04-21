@@ -20,23 +20,6 @@ layout: default
 
 <section>
 	<div class="container">
-		<h2 class="editable">Speakers</h2>
-
-		<ul class="speakers">
-			{% for speaker in site.collections.speakers.docs %}
-				<li>
-					<div>
-						<img width="230px" height="230px" src="{{ speaker.image_path }}" alt="{{ speaker.name }}" />
-					</div>
-					<h3><a href="{{ speaker.twitter_url }}">{{ speaker.name }}</a></h3>
-					<p>{{ speaker.title }}</p>
-			{% endfor %}
-		</li></ul>
-	</div>
-</section>
-
-<section>
-	<div class="container">
 		<h2 class="editable">Schedule</h2>
 		<h3> Saturday 2nd May 2015 (PST) </h3>
 		<ul class="schedule">
@@ -49,7 +32,7 @@ layout: default
 					<div class="schedule_description">
 						<h3>{{speaker.topic}}</h3>
 						<p>{{speaker.start_time}} - {{speaker.end_time}} <br />
-						<em>{{ speaker.name }}</em></p>
+						<a target="_blank" href="{{ speaker.twitter_url }}"><em>{{ speaker.name }}</em></a> - {{ speaker.title }} </p>
 					</div>
 			{% endfor %}
 		</li></ul>
