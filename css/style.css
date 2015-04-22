@@ -15,10 +15,6 @@ section {
 	padding: 20px 0;
 }
 
-img {
-	max-width: 100%;
-}
-
 h2 {
 	font-size: 2.2em;
 	font-weight: 300;
@@ -56,14 +52,14 @@ a:hover {
 .sponsors li {
 	display: inline-block;
 	vertical-align: middle;
-	width: 50%;
+	width: 33%;
 }
 
 .speakers li {
 	display: inline-block;
 	vertical-align: top;
-	width: 48%;
-	margin: 1%;
+	width: 250px;
+	margin: 10px 5px;
 }
 
 .button {
@@ -86,13 +82,6 @@ a:hover {
 	text-align:center;
 }
 
-@media (min-width: 600px) {
-	.speakers li {
-		width: 25%;
-	}
-}
-
-
 .speakers div {
 	line-height: 0;
 }
@@ -109,6 +98,40 @@ a:hover {
 	border-radius: 2px;
 }
 
+.schedule {
+	list-style: none;
+	padding: 0;
+}
+
+.schedule .schedule_image {
+	float: left;
+	width: 100px;
+}
+
+.schedule .schedule_image img {
+	border: 1px solid #ccc;
+		border-radius: 100px;
+}
+
+.schedule li {
+	clear: left;
+	padding: 20px;
+	margin: 10px 0;
+}
+
+.schedule li:nth-child(odd) {
+   background-color: #2d2d2d;
+}
+
+.schedule .schedule_description {
+	margin: 0 0 0 130px;
+}
+
+.schedule h3, .schedule p {
+	padding: 0;
+	margin: 0;
+}
+
 header, footer {
 	text-align: center;
 	background: #222;
@@ -117,6 +140,11 @@ header, footer {
 
 header h1 {
 	margin: 0;
+}
+
+header h1 img {
+	width: 100%;
+	max-width: 600px;
 }
 
 footer {
@@ -156,4 +184,11 @@ footer img {
 .share-button.twitter-button {
   position: relative;
   top: 7px;
+}
+
+@media (max-width: 680px) {
+	.sponsors li {
+		width: 100%;
+		margin: 20px 0;
+	}
 }

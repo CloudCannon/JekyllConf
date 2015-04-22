@@ -20,16 +20,20 @@ layout: default
 
 <section>
 	<div class="container">
-		<h2 class="editable">Speakers</h2>
-
-		<ul class="speakers">
-			{% for speaker in site.collections.speakers.docs %}
+		<h2 class="editable">Schedule</h2>
+		<h3> Saturday 2nd May 2015 (PST) </h3>
+		<ul class="schedule">
+			{% assign schedule = site.speakers | sort: 'start_time' %}
+			{% for speaker in schedule %}
 				<li>
-					<div>
-						<img width="230px" height="230px" src="{{ speaker.image_path }}" alt="{{ speaker.name }}" />
+					<div class="schedule_image">
+						<img width="100px" height="100px" src="{{ speaker.image_path }}" alt="{{ speaker.name }}" />
 					</div>
-					<h3><a href="{{ speaker.twitter_url }}">{{ speaker.name }}</a></h3>
-					<p>{{ speaker.title }}</p>
+					<div class="schedule_description">
+						<h3>{{speaker.topic}}</h3>
+						<p>{{speaker.start_time}} - {{speaker.end_time}} <br />
+						<a target="_blank" href="{{ speaker.twitter_url }}"><em>{{ speaker.name }}</em></a> - {{ speaker.title }} </p>
+					</div>
 			{% endfor %}
 		</li></ul>
 	</div>
@@ -43,14 +47,14 @@ layout: default
 
 	<div class="sharing-buttons">
 		<div class="share-button twitter-button">
-	    <a class="twitter-share-button" href="https://twitter.com/share" 	 data-related="twitterdev" data-count="none" data-url="http://jekyllconf.com" data-text="I just signed up for @JekyllConf - a free, online conference for all things @jekyllrb">
+	    <a class="twitter-share-button" href="https://twitter.com/share" 	 data-related="twitterdev" data-count="horizontal" data-url="http://jekyllconf.com" data-text="I just signed up for @JekyllConf - a free, online conference for all things @jekyllrb">
 	      Tweet
 	    </a>
 	    <script>
 	    window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
 	    </script>
 	  </div>
-	  <div class="share-button"><div class="fb-share-button" data-href="http://jekyllconf.com" data-layout="button"></div></div>
+	  <div class="share-button"><div class="fb-share-button" data-href="http://jekyllconf.com" data-layout="button_count"></div></div>
 
 	  <div id="fb-root"></div>
 	  <script>(function(d, s, id) {
