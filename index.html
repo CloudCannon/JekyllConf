@@ -1,6 +1,11 @@
 ---
 layout: default
 ---
+<header>
+	<h1><img src="/images/logo.png" alt="JekyllConf" width="600px"></h1>
+	<h2>The free, online global conference for all things Jekyll</h2>
+	<p>Best Practices | Advanced Case Studies | The Future of Jekyll</p>
+</header>
 
 <section>
 	<div class="container">
@@ -32,7 +37,7 @@ layout: default
 					<div class="schedule_description">
 						<h3>{{speaker.topic}}</h3>
 						<p>{{speaker.start_time}} - {{speaker.end_time}} <br />
-						<a target="_blank" href="{{ speaker.twitter_url }}"><em>{{ speaker.name }}</em></a> - {{ speaker.title }} </p>
+						<a target="_blank" href="https://twitter.com/{{ speaker.twitter_handle }}"><em>{{ speaker.name }} (@{{speaker.twitter_handle}})</em></a> - {{ speaker.title }} </p>
 					</div>
 			{% endfor %}
 		</li></ul>
