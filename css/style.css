@@ -53,7 +53,7 @@ a:hover {
 .sponsors li {
 	display: inline-block;
 	vertical-align: middle;
-	width: 33%;
+	width: 25%;
 }
 
 .speakers li {
@@ -185,6 +185,13 @@ footer img {
 .share-button.twitter-button {
   position: relative;
   top: 7px;
+}
+
+@media (max-width: 840px) {
+	.sponsors li {
+		width: 50%;
+		margin: 20px 0;
+	}
 }
 
 @media (max-width: 680px) {
