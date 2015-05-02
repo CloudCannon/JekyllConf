@@ -187,6 +187,49 @@ footer img {
   top: 7px;
 }
 
+.proportional-iframe {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: #ccc;
+}
+
+.proportional-iframe-wrapper {
+  position: relative;
+}
+
+.proportional-iframe-wrapper .ratio {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+}
+
+.proportional-iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.col {
+	width: 50%;
+	float: left;
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.twitter-feed iframe {
+	width: 80% !important;
+  display: block !important;
+  margin: 20px auto 0 auto !important;
+}
+
 @media (max-width: 840px) {
 	.sponsors li {
 		width: 50%;
