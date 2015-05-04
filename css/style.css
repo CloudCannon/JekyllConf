@@ -61,6 +61,7 @@ a:hover {
 	vertical-align: top;
 	width: 250px;
 	margin: 10px 5px;
+
 }
 
 .button {
@@ -118,6 +119,7 @@ a:hover {
 	clear: left;
 	padding: 20px;
 	margin: 10px 0;
+	min-height: 100px;
 }
 
 .schedule li:nth-child(odd) {
@@ -131,6 +133,9 @@ a:hover {
 .schedule h3, .schedule p {
 	padding: 0;
 	margin: 0;
+}
+.speaker_name {
+	color: #fff;
 }
 
 header, footer {
@@ -242,4 +247,48 @@ section:after {
 		width: 100%;
 		margin: 20px 0;
 	}
+}
+
+
+.video-dialog {
+    position: fixed;
+    display: block;
+    background: rgba(0, 0, 0, 0.95);
+    left: -9999px;
+    right: -9000px;
+    text-align: center;
+    padding: 50px;
+}
+
+.video-dialog.open {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.video-dialog-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 60px;
+    line-height: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: #EEE;
+    text-decoration: none;
+}
+
+.video-dialog-close:hover {
+    color: #fff;
+}
+
+.video-dialog-close:active {
+    color: #aaa;
+}
+
+.video-dialog iframe {
+    margin: 0 auto;
+		max-height: 100%;
+		max-width: 100%;
 }
