@@ -11,7 +11,7 @@ layout: default
 	<div class="container">
 		<h2> JekyllConf 2015 Speaker Sessions </h2>
 		<p> Video recordings now available. Click speaker session titles below to view.</p>
-		<p><a href="https://www.youtube.com/watch?v=wnQriozXBZI">Opening comments</a>, <a href="https://www.youtube.com/watch?v=0c_tNObr83s">closing comments</a> and a <a href="https://youtu.be/X5sJIL-nOhg?t=9m32s">full recording</a> of the day are also available.</p>
+		<p><a href="https://www.youtube.com/watch?v=wnQriozXBZI" data-video-id="wnQriozXBZI">Opening comments</a>, <a href="https://www.youtube.com/watch?v=0c_tNObr83s" data-video-id="0c_tNObr83s">closing comments</a> and a <a href="https://youtu.be/X5sJIL-nOhg?t=9m32s" data-video-id="X5sJIL-nOhg">full recording</a> of the day are also available.</p>
 		<ul class="schedule">
 			{% assign schedule = site.speakers | sort: 'start_time' %}
 			{% for speaker in schedule %}
@@ -20,7 +20,7 @@ layout: default
 						<img width="100px" height="100px" src="{{ speaker.image_path }}" alt="{{ speaker.name }}" />
 					</div>
 					<div class="schedule_description">
-						<h3><a href="#" data-video-id="{{speaker.youtube_id}}">{{speaker.topic}}</a></h3>
+						<h3><a href="https://youtu.be/{{speaker.youtube_id}}" data-video-id="{{speaker.youtube_id}}">{{speaker.topic}}</a></h3>
 						<p><a href="{{speaker.discussion_forum}}">Discuss this talk</a></p>
 						<p><a class="speaker_name" target="_blank" href="https://twitter.com/{{ speaker.twitter_handle }}"><em>{{ speaker.name }} (@{{speaker.twitter_handle}})</em></a>
 						<br>
