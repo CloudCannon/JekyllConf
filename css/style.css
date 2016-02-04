@@ -141,7 +141,7 @@ a:hover {
 header, footer {
 	text-align: center;
 	background: #222;
-	padding: 80px 0 100px 0;
+	padding: 0 0 40px 0;
 }
 
 header h1 {
@@ -291,4 +291,30 @@ section:after {
     margin: 0 auto;
 		max-height: 100%;
 		max-width: 100%;
+}
+
+.navigation {
+	list-style: none;
+	padding: 50px 0;
+	margin: 0;
+}
+
+.navigation li {
+	display: inline-block;
+}
+
+.navigation li a {
+	border: 2px solid #fc0;
+	padding: 6px;
+	margin: 0 10px;
+	border-radius: 10px;
+}
+
+.navigation li a:hover {
+	border-color: #f90;
+}
+
+.navigation li.active a {
+	border-color: #fff;
+	color: #fff;
 }

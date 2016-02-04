@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="country-nz">
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 
-		<title>JekyllConf - The free, online global conference for all things Jekyll</title>
+		<title>{{ page.title }}</title>
 		<meta name="author" content="CloudCannon" />
 
 		<link rel="stylesheet" href="/css/style.css" />
@@ -18,6 +18,16 @@
      href="http://jekyllconf.com/favicon.png">
 	</head>
 	<body>
+		<header>
+			<ul class="navigation">
+				<li {% if page.url == '/index.html'%} class="active"{% endif %}><a href="/">2016</a></li>
+				<li {% if page.url == '/2015/'%} class="active"{% endif %}><a href="/2015/">2015</a></li>
+				<li {% if page.url == '/code-of-conduct/'%} class="active"{% endif %}><a href="/code-of-conduct/">Code of Conduct</a></li>
+			</ul>
+			<h1><img src="/images/logo.png" alt="JekyllConf" width="600px" /></h1>
+			<h2>The free, online global conference for all things Jekyll</h2>
+			<p>Best Practices | Advanced Case Studies | The Future of Jekyll</p>
+		</header>
 
 		{{ content}}
 

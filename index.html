@@ -1,79 +1,57 @@
 ---
 layout: default
+title: JekyllConf - The free, online global conference for all things Jekyll
 ---
-<header>
-	<h1><img src="/images/logo.png" alt="JekyllConf" width="600px" /></h1>
-	<h2>The free, online global conference for all things Jekyll</h2>
-	<p>Best Practices | Advanced Case Studies | The Future of Jekyll</p>
-</header>
 
 <section>
 	<div class="container">
-		<h2> JekyllConf 2015 Speaker Sessions </h2>
-		<p> Video recordings now available. Click speaker session titles below to view.</p>
-		<p><a href="https://www.youtube.com/watch?v=wnQriozXBZI" data-video-id="wnQriozXBZI">Opening comments</a>, <a href="https://www.youtube.com/watch?v=0c_tNObr83s" data-video-id="0c_tNObr83s">closing comments</a> and a <a href="https://youtu.be/X5sJIL-nOhg?t=9m32s" data-video-id="X5sJIL-nOhg">full recording</a> of the day are also available.</p>
-		<ul class="schedule">
-			{% assign schedule = site.speakers | sort: 'start_time' %}
-			{% for speaker in schedule %}
-				<li>
-					<div class="schedule_image">
-						<img width="100px" height="100px" src="{{ speaker.image_path }}" alt="{{ speaker.name }}" />
-					</div>
-					<div class="schedule_description">
-						<h3><a href="https://youtu.be/{{speaker.youtube_id}}" data-video-id="{{speaker.youtube_id}}">{{speaker.topic}}</a></h3>
-						<p><a href="{{speaker.discussion_forum}}">Discuss this talk</a></p>
-						<p><a class="speaker_name" target="_blank" href="https://twitter.com/{{ speaker.twitter_handle }}"><em>{{ speaker.name }} (@{{speaker.twitter_handle}})</em></a>
-						<br>
-						{{ speaker.title }} </p>
-					</div>
-			{% endfor %}
-		</li></ul>
-	</div>
-</section>
+		<h2>JekyllConf 2016</h2>
 
-<section class='center-text'>
-		<h3> Register for news and updates on the next JekyllConf </h3>
-    <div class="button">
+		<h3>How much?</h3>
+		<p>Free</p>
+
+		<h3>Where?</h3>
+		<p>Streaming here at <a href="#">JekyllConf.com</a></p>
+
+		<h3>When?</h3>
+		<p>10am - 5pm (PST), Saturday May 7th 2016</p>
+
+	  <div class="button">
       <a href="http://eepurl.com/bh21-L" target="_blank">Register Free</a>
     </div>
 
+		<div class="sharing-buttons">
+			<div class="share-button twitter-button">
+		    <a class="twitter-share-button" href="https://twitter.com/share" 	 data-related="twitterdev" data-count="horizontal" data-url="http://jekyllconf.com" data-text=". @JekyllConf, the free, online conference for all things @jekyllrb">
+		      Tweet
+		    </a>
+		    <script>
+		    window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+		    </script>
+		  </div>
+		  <div class="share-button"><div class="fb-share-button" data-href="http://jekyllconf.com" data-layout="button_count"></div></div>
 
-	<div class="sharing-buttons">
-		<div class="share-button twitter-button">
-	    <a class="twitter-share-button" href="https://twitter.com/share" 	 data-related="twitterdev" data-count="horizontal" data-url="http://jekyllconf.com" data-text=". @JekyllConf, the free, online conference for all things @jekyllrb">
-	      Tweet
-	    </a>
-	    <script>
-	    window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
-	    </script>
-	  </div>
-	  <div class="share-button"><div class="fb-share-button" data-href="http://jekyllconf.com" data-layout="button_count"></div></div>
-
-	  <div id="fb-root"></div>
-	  <script>(function(d, s, id) {
-	    var js, fjs = d.getElementsByTagName(s)[0];
-	    if (d.getElementById(id)) return;
-	    js = d.createElement(s); js.id = id;
-	    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=425428800940841&version=v2.3";
-	    fjs.parentNode.insertBefore(js, fjs);
-	  }(document, 'script', 'facebook-jssdk'));</script>
+		  <div id="fb-root"></div>
+		  <script>(function(d, s, id) {
+		    var js, fjs = d.getElementsByTagName(s)[0];
+		    if (d.getElementById(id)) return;
+		    js = d.createElement(s); js.id = id;
+		    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=425428800940841&version=v2.3";
+		    fjs.parentNode.insertBefore(js, fjs);
+		  }(document, 'script', 'facebook-jssdk'));</script>
+		</div>
 	</div>
 </section>
 
-
-
 <section>
-	<div class="container">
-		<h2>Sponsors</h2>
+		<div class="container">
+			<h3>Speak at JekyllConf</h3>
 
-		<ul class="sponsors">
-			{% for sponsor in site.collections.sponsors.docs %}
-				<li>
-					<a target="_blank" href="{{ sponsor.external_url }}">
-						<img src="{{ sponsor.image_path }}" alt="CloudCannon" width="{{ sponsor.image_width }}px" />
-					</a>
-			{% endfor %}
-		</li></ul>
+			<p>We're currently looking for speakers for JekyllConf 2016. Deadline for proposals is March 14th 2016.</p>
+
+			<div class="button">
+	      <a href="https://docs.google.com/forms/d/1-SMab-uFhj4C5P_tHHKXDm7DBLWjgz5vxfpnh67zPEU/viewform?usp=send_form" target="_blank">Send your proposal</a>
+			</div>
 	</div>
 </section>
 
@@ -85,19 +63,10 @@ layout: default
 		<p>Right here on this website! We're using Google Hangouts on Air to stream the speaker sessions right to this website.</p>
 
 		<h3>I can't attend, will the videos be available later?</h3>
-		<p>Yes, all the videos are publicly available on <a target="_blank" href="https://www.youtube.com/playlist?list=PLrxYIq_0LFJcXlsRZD-JCdITfZexwvqsQ">YouTube</a>.</p>
-
-		<h3> Is there a video of the whole conference? </h3>
-		<p> <a href="http://www.youtube.com/watch?v=X5sJIL-nOhg&t=9m32s" target="_blank">Yes!</a></p>
-
-		<h3> Is there a Code of Conduct for JekyllConf? </h3>
-		<p> Yes, we want everyone to have a safe, productive, enjoyable time at the conference. <a href="/code_of_conduct.html">Here's the Code of Coduct for JekyllConf</a>.</p>
-
-		<h3> Who's the MC? </h3>
-		<p><a href="https://twitter.com/SamBonney" target="_blank">Sam Bonney</a>, Head of Marketing at CloudCannon</p>
+		<p>Yes, all the videos will be publicly available on YouTube.</p>
 
 		<h3>Who's running JekyllConf and why?</h3>
-		<p><a target="_blank" href="http://cloudcannon.com">CloudCannon</a> is organising JekyllConf. We make a platform which allows developers to create websites in HTML or Jekyll and have non-technical people make updates inline. We want to do our part in growing the community and showcase all the awesome people and projects using Jekyll.</p>
+		<p><a target="_blank" href="http://cloudcannon.com">CloudCannon</a> is organising JekyllConf. We want to do our part in growing the community and showcase all the awesome people and projects using Jekyll.</p>
 
 	</div>
 </section>
