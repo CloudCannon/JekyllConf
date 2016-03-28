@@ -1,7 +1,7 @@
 ---
 name: Michael Jovel
 title: Front-End Web Developer at FDA
-image_path: /images/speakers/michael.jpg
+image_path: /images/speakers/2015/michael.jpg
 twitter_handle: mjovel
 start_time: '13.45'
 end_time: '14.30'

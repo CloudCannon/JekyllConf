@@ -1,7 +1,7 @@
 ---
 name: Ben Balter
 title: Government Evangelist at GitHub
-image_path: /images/speakers/ben.jpg
+image_path: /images/speakers/2015/ben.jpg
 twitter_handle: BenBalter
 start_time: '11.30'
 end_time: '12.15'
