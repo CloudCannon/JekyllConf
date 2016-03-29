@@ -1,7 +1,7 @@
 ---
 name: Tom Preston-Werner
 title: The Godfather of Jekyll
-image_path: /images/speakers/tom.jpg
+image_path: /images/speakers/2015/tom.jpg
 twitter_handle: mojombo
 start_time: '12.15'
 end_time: '13.00'

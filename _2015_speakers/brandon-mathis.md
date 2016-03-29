@@ -1,7 +1,7 @@
 ---
 name: Brandon Mathis
 title: Creator of Octopress
-image_path: /images/speakers/brandon.jpg
+image_path: /images/speakers/2015/brandon.jpg
 twitter_handle: imathis
 start_time: '13.00'
 end_time: '13.45'
