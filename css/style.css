@@ -110,10 +110,6 @@ a:hover {
 	width: 100px;
 }
 
-.schedule .speaker-topic {
-	text-transform:capitalize;
-}
-
 .schedule .schedule_image img {
 	border: 1px solid #ccc;
 		border-radius: 100px;
