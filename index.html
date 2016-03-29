@@ -49,36 +49,39 @@ title: JekyllConf - The free, online global conference for all things Jekyll
 			{% assign schedule = site.2016_speakers | sort: 'start_time' %}
 
 			{% for speaker in schedule %}
-				<li>
-					<div class="schedule_image">
-						<img width="100px" height="100px" src="{{ speaker.image_path }}" alt="{{ speaker.name }}" />
-					</div>
-					<div class="schedule_description">
-						<h3 class="speaker-topic">{{ speaker.topic }}</h3>
-						<p>{{speaker.start_time}} - {{speaker.end_time}}</p>
-				{% if speaker.topic == "Lightning Talks" %}
-					{% for lightning_speaker in speaker.lightning_speakers %}
-						<p><span class="speaker-topic">{{ lightning_speaker.topic }}</span> -
-							<em>
-								{% if lightning_speaker.twitter_handle %}
-									<a href="https://twitter.com/{{ lightning_speaker.twitter_handle }}">{{ lightning_speaker.name }} (@{{ lightning_speaker.twitter_handle }})</a>
-								{% else %}
-									{{ lightning_speaker.name }}
-								{% endif %}
-							</em>
-						</p>
-					{% endfor %}
-				{% else %}
+				{% if speaker.announced %}
+					<li>
+						<div class="schedule_image">
+							<img width="100px" height="100px" src="{{ speaker.image_path }}" alt="{{ speaker.name }}" />
+						</div>
+						<div class="schedule_description">
+							<h3 class="speaker-topic">{{ speaker.topic }}</h3>
+							<p>{{speaker.start_time}} - {{speaker.end_time}}</p>
+					{% if speaker.topic == "Lightning Talks" %}
+						{% for lightning_speaker in speaker.lightning_speakers %}
+							<p><span class="speaker-topic">{{ lightning_speaker.topic }}</span> -
+								<em>
+									{% if lightning_speaker.twitter_handle %}
+										<a href="https://twitter.com/{{ lightning_speaker.twitter_handle }}">{{ lightning_speaker.name }} (@{{ lightning_speaker.twitter_handle }})</a>
+									{% else %}
+										{{ lightning_speaker.name }}
+									{% endif %}
+								</em>
+							</p>
+						{% endfor %}
+					{% else %}
 
 
-						<p><a target="_blank" href="https://twitter.com/{{ speaker.twitter_handle }}"><em>{{ speaker.name }} (@{{ speaker.twitter_handle }})</em></a>
-						<br>
-						{{ speaker.title }} </p>
+							<p><a target="_blank" href="https://twitter.com/{{ speaker.twitter_handle }}"><em>{{ speaker.name }} (@{{ speaker.twitter_handle }})</em></a>
+							<br>
+							{{ speaker.title }} </p>
+					{% endif %}
+						</div>
+					</li>
 				{% endif %}
-					</div>
-				</li>
 			{% endfor %}
 		</ul>
+		<h3>More speakers announced every day</h3>
 	</div>
 </section>
 

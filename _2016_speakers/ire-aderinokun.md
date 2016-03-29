@@ -7,4 +7,5 @@ start_time: '10.00'
 end_time: '10.30'
 topic: Using Jekyll for Rapid CSS Testing
 youtube_id:
+announced: true
 ---
