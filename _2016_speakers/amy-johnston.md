@@ -7,4 +7,5 @@ start_time: '10.30'
 end_time: '11.00'
 topic: Jekyll for Technical Documentation
 youtube_id:
+announced: true
 ---
