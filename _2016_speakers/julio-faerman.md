@@ -7,4 +7,5 @@ start_time: '11.00'
 end_time: '11.30'
 topic: Jekyll on AWS
 youtube_id:
+announced: true
 ---
