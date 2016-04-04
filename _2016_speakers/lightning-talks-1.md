@@ -16,4 +16,5 @@ lightning_speakers:
   - topic: Doing a lot with a little
     name: David Darnes
     twitter_handle: DavidDarnes
+announced: true
 ---
