@@ -5,6 +5,6 @@ image_path: /images/speakers/2016/katy.jpg
 twitter_handle: katydecorah
 start_time: '13.00'
 end_time: '13.30'
-topic: Interesting Jekyll Use Cases
+topic: Unconventional use cases for Jekyll
 youtube_id:
 ---
