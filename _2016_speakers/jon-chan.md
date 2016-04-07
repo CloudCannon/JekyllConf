@@ -7,4 +7,5 @@ start_time: '13.30'
 end_time: '14.00'
 topic: Stack Overflow on Jekyll
 youtube_id:
+announced: true
 ---

@@ -7,4 +7,5 @@ start_time: '13.00'
 end_time: '13.30'
 topic: Unconventional use cases for Jekyll
 youtube_id:
+announced: true
 ---
