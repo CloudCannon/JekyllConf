@@ -13,4 +13,5 @@ lightning_speakers:
   - topic: Using Jekyll to Manage Our iOS Coding Bootcamp
     name: Caleb Hicks
     twitter_handle: calebhicks
+announced: true
 ---
