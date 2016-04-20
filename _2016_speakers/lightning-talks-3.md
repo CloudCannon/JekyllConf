@@ -16,4 +16,5 @@ lightning_speakers:
   - topic: Algolia search on Jekyll sites
     name: Tim Carry
     twitter_handle: pixelastic
+announced: true
 ---
