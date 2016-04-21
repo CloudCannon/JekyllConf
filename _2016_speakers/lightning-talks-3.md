@@ -7,7 +7,7 @@ lightning_speakers:
   - topic: Building a living brand guide with Jekyll and Hologram
     name: Nils Borchers
     twitter_handle: nilsborchers
-  - topic: Continuous deployment of Jekyll sites powered by AWS Lambda
+  - topic: Continuous deployment of Jekyll sites powered by Docker
     name: David Von Lehman
     twitter_handle: davidvlsea
   - topic: Responsive srcset images with imgix
