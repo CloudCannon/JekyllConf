@@ -10,8 +10,8 @@ lightning_speakers:
   - topic: Jekyll For Every Case
     name: Scott Hewitt
     twitter_handle: scotthewitt
-  - topic: Using Jekyll to Manage Our iOS Coding Bootcamp
-    name: Caleb Hicks
-    twitter_handle: calebhicks
+  - topic: Algolia search on Jekyll sites
+    name: Tim Carry
+    twitter_handle: pixelastic
 announced: true
 ---
