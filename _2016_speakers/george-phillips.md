@@ -6,6 +6,6 @@ twitter_handle: gphillips_nz
 start_time: '15.30'
 end_time: '16.00'
 topic: Building client-editable Jekyll sites
-youtube_id:
+youtube_id: skb_XWABEDc
 announced: true
 ---

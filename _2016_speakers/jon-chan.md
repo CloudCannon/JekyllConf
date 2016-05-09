@@ -6,6 +6,6 @@ twitter_handle: JonHMChan
 start_time: '13.30'
 end_time: '14.00'
 topic: Stack Overflow on Jekyll
-youtube_id:
+youtube_id: vDeKPs6xpOM
 announced: true
 ---

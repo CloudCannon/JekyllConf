@@ -6,6 +6,6 @@ twitter_handle: NetOpWibby
 start_time: '12.30'
 end_time: '13.00'
 topic: Deploy Jekyll Like A Boss
-youtube_id:
+youtube_id: BRB5DgAE5nM
 announced: true
 ---

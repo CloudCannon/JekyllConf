@@ -6,6 +6,6 @@ twitter_handle: tomjohnson
 start_time: '16.00'
 end_time: '16.30'
 topic: Overcoming challenges in using Jekyll for documentation projects
-youtube_id:
+youtube_id: nq1AUB72GCQ
 announced: true
 ---

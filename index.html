@@ -5,62 +5,10 @@ title: JekyllConf - The free, online global conference for all things Jekyll
 
 <section>
 	<div class="container">
-		<!-- <h2>JekyllConf 2016</h2>
+		<h2>JekyllConf 2016</h2>
 
-		<h3>How much?</h3>
-		<p>Free</p>
+		<p><a href="https://www.youtube.com/watch?v=wnQriozXBZI" data-video-id="ymGAJS9r9E8">Opening comments</a>, <a href="https://www.youtube.com/watch?v=NuhKfI3vSuw" data-video-id="NuhKfI3vSuw">closing comments</a> and a <a href="https://youtu.be/VModMcNme2M?t=29m27s" data-video-id="VModMcNme2M">full recording</a> of the day are also available.</p>
 
-		<h3>Where?</h3>
-		<p>Streaming here at <a href="#">JekyllConf.com</a></p>
-
-		<h3>When?</h3>
-		<p>10am - 5pm (PST), Saturday May 7th 2016</p>
-
-	  <div class="button">
-      <a href="http://eepurl.com/bh21-L" target="_blank">Register Free</a>
-    </div> -->
-		<section>
-	<div class="container">
-		<h2> Streaming Live </h2>
-			<div class="proportional-iframe">
-					<div class="proportional-iframe-wrapper">
-						<img class="ratio" src="/images/16x10.gif" alt="placeholder" />
-						<iframe width="700px" height="315" src="http://www.youtube.com/embed/VModMcNme2M?autoplay=1&rel=0&modestbranding=1&autohide=1" frameborder="0" allowfullscreen></iframe>
-					</div>
-				</div>
-				<div class="twitter-feed">
-					<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/jekyllconf" data-widget-id="578354256903680000">#jekyllconf Tweets</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</div>
-		</div>
-</section>
-
-
-		<div class="sharing-buttons">
-			<div class="share-button twitter-button">
-		    <a class="twitter-share-button" href="https://twitter.com/share" 	 data-related="twitterdev" data-count="horizontal" data-url="http://jekyllconf.com" data-text=". @JekyllConf, the free, online conference for all things @jekyllrb">
-		      Tweet
-		    </a>
-		    <script>
-		    window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
-		    </script>
-		  </div>
-		  <div class="share-button"><div class="fb-share-button" data-href="http://jekyllconf.com" data-layout="button_count"></div></div>
-
-		  <div id="fb-root"></div>
-		  <script>(function(d, s, id) {
-		    var js, fjs = d.getElementsByTagName(s)[0];
-		    if (d.getElementById(id)) return;
-		    js = d.createElement(s); js.id = id;
-		    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=425428800940841&version=v2.3";
-		    fjs.parentNode.insertBefore(js, fjs);
-		  }(document, 'script', 'facebook-jssdk'));</script>
-		</div>
-	</div>
-</section>
-
-<section>
-	<div class="container">
 		<ul class="schedule">
 			{% assign schedule = site.2016_speakers | sort: 'start_time' %}
 
@@ -71,14 +19,15 @@ title: JekyllConf - The free, online global conference for all things Jekyll
 							<img width="100px" height="100px" src="{{ speaker.image_path }}" alt="{{ speaker.name }}" />
 						</div>
 						<div class="schedule_description">
-							<h3 class="speaker-topic">{{ speaker.topic }}</h3>
-							<p>{{speaker.start_time}} - {{speaker.end_time}}</p>
-					{% if speaker.topic == "Lightning Talks" %}
+							{% if speaker.topic == "Lightning Talks" %}
+								<h3 class="speaker-topic">
+									{{ speaker.topic }}
+								</h3>
 						{% for lightning_speaker in speaker.lightning_speakers %}
-							<p><span class="speaker-topic">{{ lightning_speaker.topic }}</span> -
+							<p><span class="speaker-topic"><a href="https://youtu.be/{{lightning_speaker.youtube_id}}" data-video-id="{{lightning_speaker.youtube_id}}">{{ lightning_speaker.topic }}</a></span> -
 								<em>
 									{% if lightning_speaker.twitter_handle %}
-										<a href="https://twitter.com/{{ lightning_speaker.twitter_handle }}">{{ lightning_speaker.name }} (@{{ lightning_speaker.twitter_handle }})</a>
+										<a class="speaker_name" target="_blank" href="https://twitter.com/{{ lightning_speaker.twitter_handle }}">{{ lightning_speaker.name }} (@{{ lightning_speaker.twitter_handle }})</a>
 									{% else %}
 										{{ lightning_speaker.name }}
 									{% endif %}
@@ -86,9 +35,10 @@ title: JekyllConf - The free, online global conference for all things Jekyll
 							</p>
 						{% endfor %}
 					{% else %}
-
-
-							<p><a target="_blank" href="https://twitter.com/{{ speaker.twitter_handle }}"><em>{{ speaker.name }} (@{{ speaker.twitter_handle }})</em></a>
+							<h3 class="speaker-topic">
+								<a href="https://youtu.be/{{speaker.youtube_id}}" data-video-id="{{speaker.youtube_id}}">{{ speaker.topic }}</a>
+							</h3>
+							<p><a class="speaker_name" target="_blank" href="https://twitter.com/{{ speaker.twitter_handle }}"><em>{{ speaker.name }} (@{{ speaker.twitter_handle }})</em></a>
 							<br>
 							{{ speaker.title }} </p>
 					{% endif %}

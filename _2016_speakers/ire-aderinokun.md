@@ -6,6 +6,6 @@ twitter_handle: ireaderinokun
 start_time: '10.00'
 end_time: '10.30'
 topic: Using Jekyll for Rapid CSS Testing
-youtube_id:
+youtube_id: CEG87EAkFu4
 announced: true
 ---

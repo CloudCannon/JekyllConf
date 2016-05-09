@@ -6,6 +6,6 @@ twitter_handle: budparr
 start_time: '11.30'
 end_time: '12.00'
 topic: Real World Content Strategy with Jekyll
-youtube_id:
+youtube_id: A1nTuNjoNbg
 announced: true
 ---
