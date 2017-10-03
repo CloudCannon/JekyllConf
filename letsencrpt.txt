@@ -1,1 +1,4 @@
+---
+permalink: '.well-known/acme-challenge/yZ6pSbA0sipEupQ5lWu5ljsPuLTFId2Kgx6UZKMWobI'
+---
 yZ6pSbA0sipEupQ5lWu5ljsPuLTFId2Kgx6UZKMWobI.w5gZ67OnTHwtwNEUdN96FoNp0R7XkZWRzAGY5KpPMgg
