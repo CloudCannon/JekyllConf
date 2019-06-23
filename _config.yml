@@ -2,4 +2,8 @@ collections:
   2015_sponsors:
   2015_speakers:
   2016_speakers:
-version: 3.0.3
+
+
+title: JekyllConf
+description: The free, online global conference for all things Jekyll
+register_link: https://eepurl.com/gvb35b

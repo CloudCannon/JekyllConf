@@ -7,4 +7,5 @@ start_time: '13.45'
 end_time: '14.30'
 topic: Building Living Style Guides with Jekyll
 youtube_id: 8zSHG6XU_xY
+announced: true
 ---

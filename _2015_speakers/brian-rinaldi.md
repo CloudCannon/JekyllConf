@@ -7,4 +7,5 @@ start_time: '10.00'
 end_time: '10.45'
 topic: Comparing Jekyll with the Competition
 youtube_id: vT7DhK5zbv0
+announced: true
 ---

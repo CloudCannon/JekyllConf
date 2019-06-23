@@ -4,48 +4,32 @@ title: JekyllConf - The free, online global conference for all things Jekyll
 ---
 <section>
 	<div class="container">
-		<h2>JekyllConf 2016</h2>
+		<h2>JekyllConf 2019</h2>
 
-		<p><a href="https://www.youtube.com/watch?v=wnQriozXBZI" data-video-id="ymGAJS9r9E8">Opening comments</a>, <a href="https://www.youtube.com/watch?v=NuhKfI3vSuw" data-video-id="NuhKfI3vSuw">closing comments</a> and a <a href="https://youtu.be/VModMcNme2M?t=29m27s" data-video-id="VModMcNme2M">full recording</a> of the day are also available.</p>
+		<h3>How much?</h3>
+		<p>Free</p>
 
-		<ul class="schedule">
-			{% assign schedule = site.2016_speakers | sort: 'start_time' %}
+		<h3>Where?</h3>
+		<p>Streaming here at <a href="#">JekyllConf.com</a></p>
 
-			{% for speaker in schedule %}
-				{% if speaker.announced %}
-					<li>
-						<div class="schedule_image">
-							<img width="100px" height="100px" src="{{ speaker.image_path }}" alt="{{ speaker.name }}" />
-						</div>
-						<div class="schedule_description">
-							{% if speaker.topic == "Lightning Talks" %}
-								<h3 class="speaker-topic">
-									{{ speaker.topic }}
-								</h3>
-						{% for lightning_speaker in speaker.lightning_speakers %}
-							<p><span class="speaker-topic"><a href="https://youtu.be/{{lightning_speaker.youtube_id}}" data-video-id="{{lightning_speaker.youtube_id}}">{{ lightning_speaker.topic }}</a></span> -
-								<em>
-									{% if lightning_speaker.twitter_handle %}
-										<a class="speaker_name" target="_blank" href="https://twitter.com/{{ lightning_speaker.twitter_handle }}">{{ lightning_speaker.name }} (@{{ lightning_speaker.twitter_handle }})</a>
-									{% else %}
-										{{ lightning_speaker.name }}
-									{% endif %}
-								</em>
-							</p>
-						{% endfor %}
-					{% else %}
-							<h3 class="speaker-topic">
-								<a href="https://youtu.be/{{speaker.youtube_id}}" data-video-id="{{speaker.youtube_id}}">{{ speaker.topic }}</a>
-							</h3>
-							<p><a class="speaker_name" target="_blank" href="https://twitter.com/{{ speaker.twitter_handle }}"><em>{{ speaker.name }} (@{{ speaker.twitter_handle }})</em></a>
-							<br>
-							{{ speaker.title }} </p>
-					{% endif %}
-						</div>
-					</li>
-				{% endif %}
-			{% endfor %}
-		</ul>
+		<h3>When?</h3>
+		<p>10am - 5pm (PST), Sunday August 11th 2019</p>
+
+	  <div class="button">
+      <a href="{{ site.register_link }}" target="_blank">Register Free</a>
+    </div>
+	</div>
+</section>
+
+<section>
+		<div class="container">
+			<h3>Speak at JekyllConf</h3>
+
+			<p>We're currently looking for speakers for JekyllConf 2019. Deadline for proposals is July 20th 2019.</p>
+
+			<div class="button">
+	      <a href="https://forms.gle/sZdyKDFh4PAyuSXM7" target="_blank">Send your proposal</a>
+			</div>
 	</div>
 </section>
 
@@ -54,12 +38,12 @@ title: JekyllConf - The free, online global conference for all things Jekyll
 		<h2>Details</h2>
 
 		<h3>Where is JekyllConf being held?</h3>
-		<p>JekyllConf is a virtual conference. We're using Google Hangouts on Air to stream the speaker sessions straight to this website.</p>
+		<p>JekyllConf is a virtual conference. We're stream directly to this website.</p>
 
 		<h3>I can't attend, will the videos be available later?</h3>
 		<p>Yes, all the videos will be publicly available on YouTube.</p>
 
 		<h3>Who's running JekyllConf and why?</h3>
-		<p><a target="_blank" href="http://cloudcannon.com">CloudCannon</a> is organising JekyllConf. We want to help grow the Jekyll community and showcase all the awesome people and projects using Jekyll.</p>
+		<p><a target="_blank" href="https://cloudcannon.com">CloudCannon</a> is organising JekyllConf. We want to help grow the Jekyll community and showcase all the awesome people and projects using Jekyll.</p>
 	</div>
 </section>

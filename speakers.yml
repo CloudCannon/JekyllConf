@@ -1,0 +1,23 @@
+---
+---
+{% for year in site.collections %}
+  {% if year.label contains '_speakers' %}
+    {% for speaker in year.docs %}
+      {% if speaker.topic == "Lightning Talks" %}
+        {% for lightning_speaker in speaker.lightning_speakers %}
+- speaker: {{ lightning_speaker.name }}
+  twitter_handle: {{ lightning_speaker.twitter_handle }}
+  youtube_id: {{ lightning_speaker.youtube_id }}
+  topic: {{ lightning_speaker.topic }}
+  year: {{ year.label | split: '_' | first }}
+        {% endfor %}
+      {% else %}
+- speaker: {{ speaker.name }}
+  twitter_handle: {{ speaker.twitter_handle }}
+  youtube_id: {{ speaker.youtube_id }}
+  topic: {{ speaker.topic }}
+  year: {{ year.label | split: '_' | first }}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}

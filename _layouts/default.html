@@ -9,49 +9,33 @@
 		<link rel="stylesheet" href="/css/style.css" />
 
 		<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900">
-        <link rel="icon"
-     type="image/png"
-     href="http://jekyllconf.com/favicon.png">
+				<link rel="icon"
+		 type="image/png"
+		 href="https://jekyllconf.com/favicon.png">
 	</head>
 	<body>
 		<header>
 			<ul class="navigation">
-				<li {% if page.url == '/'%} class="active"{% endif %}><a href="/">2016</a></li>
+				<li {% if page.url == '/'%} class="active"{% endif %}><a href="/">2019</a></li>
+				<li {% if page.url == '/2016/'%} class="active"{% endif %}><a href="/2016/">2016</a></li>
 				<li {% if page.url == '/2015/'%} class="active"{% endif %}><a href="/2015/">2015</a></li>
 				<li {% if page.url == '/code-of-conduct/'%} class="active"{% endif %}><a href="/code-of-conduct/">Code of Conduct</a></li>
 			</ul>
 			<h1><img src="/images/jekyllconf-logo-light.png" alt="JekyllConf" width="600px" /></h1>
-			<h2>The free, online global conference for all things Jekyll</h2>
+			<h2>{{ site.description }}</h2>
 			<p>Best Practices | Advanced Case Studies | The Future of Jekyll</p>
-				  <div class="button">
-			      <a href="http://eepurl.com/bh21-L" target="_blank">Register free for 2019</a>
-			    </div>
+			<div class="button">
+				<a href="{{ site.register_link }}" target="_blank">Register free for 2019</a>
+			</div>
 
 
-					<div class="sharing-buttons">
-						<div class="share-button twitter-button">
-					    <a class="twitter-share-button" href="https://twitter.com/share" 	 data-related="twitterdev" data-count="horizontal" data-url="http://jekyllconf.com" data-text=". @JekyllConf, the free, online conference for all things @jekyllrb">
-					      Tweet
-					    </a>
-					    <script>
-					    window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
-					    </script>
-					  </div>
-					  <div class="share-button"><div class="fb-share-button" data-href="http://jekyllconf.com" data-layout="button_count"></div></div>
-
-					  <div id="fb-root"></div>
-					  <script>(function(d, s, id) {
-					    var js, fjs = d.getElementsByTagName(s)[0];
-					    if (d.getElementById(id)) return;
-					    js = d.createElement(s); js.id = id;
-					    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=425428800940841&version=v2.3";
-					    fjs.parentNode.insertBefore(js, fjs);
-					  }(document, 'script', 'facebook-jssdk'));</script>
-					</div>
+			<div class="sharing-buttons">
+				{% include social/share-buttons.html %}
+			</div>
 		</header>
 
 		{{ content}}
@@ -60,34 +44,32 @@
 			<div class="container">
 				<p class="hosted-by">
 					Proudly hosted by
-					<a href="http://cloudcannon.com">
+					<a href="https://cloudcannon.com">
 						<img src="/images/sponsors/cloudcannon.svg" height="50" alt="CloudCannon">
 					</a>
 				</p>
 
 				<p> <a class="twitter-follow-button"
-  href="https://twitter.com/JekyllConf"
-  data-show-count="false"
-  data-lang="en">
+	href="https://twitter.com/JekyllConf"
+	data-show-count="false"
+	data-lang="en">
 Follow @JekyllConf
 </a>
 <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script></p>
 
-				<p>The contents of this website are &copy; {{ site.time | date: '%Y' }} <a href="http://cloudcannon.com">CloudCannon</a>.
+				<p>The contents of this website are &copy; {{ site.time | date: '%Y' }} <a href="https://cloudcannon.com">CloudCannon</a>.
 			</div>
 		</footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="/js/basic.js"></script>
 		<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-37472773-13', 'auto');
-  ga('send', 'pageview');
-
-</script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-37472773-13', 'auto');
+			ga('send', 'pageview');
+		</script>
 
 	</body>
 </html>
