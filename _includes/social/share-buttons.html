@@ -1,7 +1,7 @@
-<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fexample.com%2F" class="share-button facebook" target="_blank">
+<a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | url_encode }}" class="share-button facebook" target="_blank">
 	{% include social/facebook.html %} Share on Facebook
 </a>
 
-<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fexample.com%2F" class="share-button twitter" target="_blank">
+<a href="https://twitter.com/intent/tweet?url={{ site.url | url_encode }}&text={{ site.share_message | url_encode }}" class="share-button twitter" target="_blank">
 	{% include social/twitter.html %} Share on Twitter
 </a>
