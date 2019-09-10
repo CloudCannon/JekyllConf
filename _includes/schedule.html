@@ -1,0 +1,53 @@
+<ul class="schedule">
+	{% assign schedule = include.speakers | sort: 'start_time' %}
+	{% for speaker in schedule %}
+		{% if speaker.announced %}
+			<li>
+				<div class="schedule_image">
+					<img width="100px" height="100px" src="{{ speaker.image_path }}" alt="{{ speaker.name }}" />
+				</div>
+				<div class="schedule_description">
+					{% if speaker.topic == "Lightning Talks" %}
+						<h3 class="speaker-topic">
+							{{ speaker.topic }}
+						</h3>
+						{% if include.future %}<p>{{ speaker.start_time }} - {{ speaker.end_time }}</p>{% endif %}
+						{% for lightning_speaker in speaker.lightning_speakers %}
+							<p><span class="speaker-topic">
+								<a href="https://youtu.be/{{lightning_speaker.youtube_id}}" data-video-id="{{lightning_speaker.youtube_id}}">{{ lightning_speaker.topic }}</a></span> -
+								<em>
+									{% if lightning_speaker.twitter_handle %}
+										<a class="speaker_name" target="_blank" href="https://twitter.com/{{ lightning_speaker.twitter_handle }}">{{ lightning_speaker.name }} (@{{ lightning_speaker.twitter_handle }})</a>
+									{% else %}
+										{{ lightning_speaker.name }}
+									{% endif %}
+								</em>
+							</p>
+						{% endfor %}
+					{% else %}
+						<h3 class="speaker-topic">
+							{% if speaker.youtube_id %}
+								<a href="https://youtu.be/{{speaker.youtube_id}}" data-video-id="{{ speaker.youtube_id }}">
+							{% endif %}
+							{{ speaker.topic }}
+							{% if speaker.youtube_id %}
+								</a>
+							{% endif %}
+						</h3>
+						{% if include.future %}<p>{{ speaker.start_time }} - {{ speaker.end_time }} PST</p>{% endif %}
+						<p>
+								<a class="speaker_name" target="_blank" {% if speaker.twitter_handle %}
+									href="https://twitter.com/{{ speaker.twitter_handle }}"
+								{% endif %}>
+								<em>{{ speaker.name }} 
+								{% if speaker.twitter_handle %}
+									(@{{speaker.twitter_handle}})
+								{% endif %}</em></a>
+						<br>
+						{{ speaker.title }} </p>
+					{% endif %}
+				</div>
+			</li>
+		{% endif %}
+	{% endfor %}
+</ul>

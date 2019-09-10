@@ -2,41 +2,7 @@
 	<div class="container">
 		<h2>JekyllConf {{ include.year }}</h2>
 		<p><a href="https://youtu.be/{{ include.opening_comments }}" data-video-id="{{ include.opening_comments }}">Opening comments</a>, <a href="https://youtu.be/{{ include.closing_comments }}" data-video-id="{{ include.closing_comments }}">closing comments</a> and a <a href="https://youtu.be/{{ include.full_video }}" data-video-id="{{ include.full_video }}">full recording</a> of the day are also available.</p>
-		<ul class="schedule">
-			{% assign schedule = include.speakers | sort: 'start_time' %}
-			{% for speaker in schedule %}
-				{% if speaker.announced %}
-					<li>
-						<div class="schedule_image">
-							<img width="100px" height="100px" src="{{ speaker.image_path }}" alt="{{ speaker.name }}" />
-						</div>
-						<div class="schedule_description">
-							{% if speaker.topic == "Lightning Talks" %}
-								<h3 class="speaker-topic">
-									{{ speaker.topic }}
-								</h3>
-								{% for lightning_speaker in speaker.lightning_speakers %}
-									<p><span class="speaker-topic"><a href="https://youtu.be/{{lightning_speaker.youtube_id}}" data-video-id="{{lightning_speaker.youtube_id}}">{{ lightning_speaker.topic }}</a></span> -
-										<em>
-											{% if lightning_speaker.twitter_handle %}
-												<a class="speaker_name" target="_blank" href="https://twitter.com/{{ lightning_speaker.twitter_handle }}">{{ lightning_speaker.name }} (@{{ lightning_speaker.twitter_handle }})</a>
-											{% else %}
-												{{ lightning_speaker.name }}
-											{% endif %}
-										</em>
-									</p>
-								{% endfor %}
-							{% else %}
-								<h3 class="speaker-topic"><a href="https://youtu.be/{{speaker.youtube_id}}" data-video-id="{{ speaker.youtube_id }}">{{speaker.topic}}</a></h3>
-								<p><a class="speaker_name" target="_blank" href="https://twitter.com/{{ speaker.twitter_handle }}"><em>{{ speaker.name }} (@{{speaker.twitter_handle}})</em></a>
-								<br>
-								{{ speaker.title }} </p>
-							{% endif %}
-						</div>
-					</li>
-				{% endif %}
-			{% endfor %}
-		</ul>
+		{% include schedule.html speakers=include.speakers %}
 	</div>
 </section>
 
