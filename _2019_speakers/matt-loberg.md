@@ -1,6 +1,6 @@
 ---
 name: Matthew Loberg
-title: Leverage AWS S3 and CloudFront to deploy blazing fast Jekyll sites.
+title: Principal Software Engineer at Nerdery
 image_path: /images/speakers/2019/matt.jpg
 twitter_handle: mloberg
 start_time: '12.30'
