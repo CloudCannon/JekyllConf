@@ -1,7 +1,6 @@
 <section>
 	<div class="container">
 		<h2>JekyllConf {{ include.year }}</h2>
-		<p><a href="https://youtu.be/{{ include.opening_comments }}" data-video-id="{{ include.opening_comments }}">Opening comments</a>, <a href="https://youtu.be/{{ include.closing_comments }}" data-video-id="{{ include.closing_comments }}">closing comments</a> and a <a href="https://youtu.be/{{ include.full_video }}" data-video-id="{{ include.full_video }}">full recording</a> of the day are also available.</p>
 		{% include schedule.html speakers=include.speakers %}
 	</div>
 </section>

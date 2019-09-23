@@ -7,4 +7,5 @@ start_time: '12.30'
 end_time: '13.00'
 topic: Leverage AWS S3 and CloudFront to deploy blazing fast Jekyll sites.
 announced: true
+youtube_id: 6eiAjAtSGqw
 ---

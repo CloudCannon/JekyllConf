@@ -7,4 +7,5 @@ start_time: '13.00'
 end_time: '13.30'
 topic: Structuring Jekyll sites for enterprise design systems
 announced: true
+youtube_id: nEvdOwFJBVc
 ---

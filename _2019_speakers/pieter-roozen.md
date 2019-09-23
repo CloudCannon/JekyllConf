@@ -7,4 +7,5 @@ start_time: '10.00'
 end_time: '10.30'
 topic: Jekyll as an API endpoint
 announced: true
+youtube_id: moQP0SqEPsw
 ---

@@ -7,4 +7,5 @@ start_time: '11.00'
 end_time: '11.30'
 topic: The Lean Web
 announced: true
+youtube_id: vR1aI_kQ4-A
 ---

@@ -6,5 +6,5 @@ twitter_handle: jhvanderschee
 start_time: '12.00'
 end_time: '12.30'
 topic: Jekyll Codex - Jekyll for front-end developers
-announced: true
+youtube_id: ztJJ1GSlYgI
 ---
